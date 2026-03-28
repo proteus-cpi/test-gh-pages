@@ -1,50 +1,29 @@
-# Canonical site URL
-url: "https://proteus-cpi.github.io"
+title: "My Jekyll Blog"
+description: "A simple blog built with Jekyll"
+baseurl: "/test-gh-pages"         # the subpath of your site, e.g. /blog
+url: "https://proteus-cpi.github.io"    # the base hostname & protocol for your site e.g. http://example.com 
 
-# REQUIRED for project sites (repo name)
-baseurl: "/test-gh-pages"
-
-# IMPORTANT: since site is served from /docs
-source: docs
-
-# Build settings
-markdown: kramdown
-
-# Collections
 collections:
   authors:
     output: true
 
-# Default layouts
 defaults:
   - scope:
       path: ""
       type: "authors"
     values:
       layout: "author"
-
   - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
-
   - scope:
       path: ""
     values:
       layout: "default"
 
-# Plugins (GitHub Pages supported)
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
-
-# Optional but recommended
-permalink: pretty
-
-# Exclusions
-exclude:
-  - README.md
-  - LICENSE
-  - .gitignore

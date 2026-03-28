@@ -2,7 +2,7 @@
 title: Sample HTML Document
 ---
 
-# Hello World (Jekyll Should build this)
+# Hello World
 
 ## Heading 2
 
