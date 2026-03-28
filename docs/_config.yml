@@ -1,31 +1,53 @@
-domain:   proteus-cpi.github.io           
-# if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
-url:      https://proteus-cpi.github.io   
-# the base hostname and protocol for your site, e.g. http://example.com
-baseurl:  /test-gh-pages                    
-# place folder name if the site is served in a subfolder
+# Domain (optional for GitHub Pages, mainly for custom domains)
+domain: proteus-cpi.github.io
 
+# Canonical site URL
+url: "https://proteus-cpi.github.io"
+
+# REQUIRED for project sites (repo name)
+baseurl: "/test-gh-pages"
+
+# IMPORTANT: since site is served from /docs
+source: docs
+
+# Build settings
+markdown: kramdown
+
+# Collections
 collections:
   authors:
     output: true
 
+# Default layouts
 defaults:
   - scope:
       path: ""
       type: "authors"
     values:
       layout: "author"
+
   - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
+
   - scope:
       path: ""
     values:
       layout: "default"
 
+# Plugins (GitHub Pages supported)
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+
+# Optional but recommended
+permalink: pretty
+
+# Exclusions
+exclude:
+  - README.md
+  - LICENSE
+  - .gitignore
